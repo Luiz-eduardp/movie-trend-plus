@@ -1,0 +1,32 @@
+// app global css in SCSS form
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo {
+    grid-template-columns: repeat(1, 300px) !important;
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+.movies-list {
+    //2 collumns in a row
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 20px;
+    //breakpoints for mobile and tablet
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 300px) !important;
+    }
+    .movieCard {
+        width: 300px;
+        max-width: 300px;
+        max-height: auto;
+        height: auto;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+}
